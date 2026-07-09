@@ -1,5 +1,6 @@
-// Vite SSR server. Dev: Vite middleware + on-the-fly SSR. Prod: serve built client
-// assets + server-rendered HTML from dist/. Cloudways start command: npm start.
+// Vite SSR runtime entry (Cloudways entry file: server.js).
+// Dev: Vite middleware + on-the-fly SSR. Prod: serve built client assets + SSR from dist/.
+// Start: npm start  |  SSR render bundle: dist/server/entry-server.js (not the process entry).
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';

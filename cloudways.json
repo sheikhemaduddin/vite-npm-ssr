@@ -1,0 +1,13 @@
+{
+  "renderingMode": "ssr",
+  "framework": "vite",
+  "packageManager": "npm",
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist",
+  "entryFile": "server.js",
+  "startCommand": "npm start",
+  "ssr": {
+    "renderEntry": "src/entry-server.jsx",
+    "renderBundle": "dist/server/entry-server.js"
+  }
+}

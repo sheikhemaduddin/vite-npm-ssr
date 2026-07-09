@@ -4,6 +4,13 @@
   "private": true,
   "description": "Vite SSR (server entry required, express render server) — Cloudways launch test",
   "type": "module",
+  "main": "server.js",
+  "cloudways": {
+    "renderingMode": "ssr",
+    "framework": "vite",
+    "entryFile": "server.js",
+    "startCommand": "npm start"
+  },
   "scripts": {
     "dev": "node server.js",
     "build": "npm run build:client && npm run build:server",
