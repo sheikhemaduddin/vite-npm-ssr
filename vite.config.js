@@ -6,4 +6,8 @@ export default defineConfig({
   ssr: {
     noExternal: ['react', 'react-dom'],
   },
+  server: {
+    // Cloudways staging/production hostnames when Vite dev middleware is active
+    allowedHosts: ['.cloudwaysstagingapps.com', '.cloudwaysapps.com'],
+  },
 });

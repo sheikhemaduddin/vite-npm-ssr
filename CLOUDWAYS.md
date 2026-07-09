@@ -16,6 +16,8 @@ Standard Vite + React SSR app (Express render server). Mirrors a typical custome
 
 Listens on `process.env.PORT`. Generate the lockfile with `./generate-lockfile.sh` before pushing.
 
+**Note:** If Cloudways runs `node server.js` directly (without `NODE_ENV`), the server defaults to **production** mode. Use `npm start` or set `NODE_ENV=production` explicitly. Vite `allowedHosts` includes `*.cloudwaysstagingapps.com` and `*.cloudwaysapps.com` for staging.
+
 ## Entry files (do not confuse)
 
 | File | Purpose |

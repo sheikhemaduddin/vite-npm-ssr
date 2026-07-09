@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 import express from 'express';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV !== 'development';
 const PORT = process.env.PORT || 3000;
 
 async function createServer() {
@@ -47,7 +47,7 @@ async function createServer() {
     }
   });
 
-  app.listen(PORT, () => console.log(`[vite-ssr] listening on ${PORT} (prod=${isProd})`));
+  app.listen(PORT, '0.0.0.0', () => console.log(`[vite-ssr] listening on ${PORT} (prod=${isProd})`));
 }
 
 createServer();
