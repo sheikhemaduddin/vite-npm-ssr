@@ -1,0 +1,27 @@
+{
+  "name": "vite-ssr-npm",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vite SSR (server entry required, express render server) — Cloudways launch test",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
